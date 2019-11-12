@@ -1,0 +1,6 @@
+*.idea
+*.DS_Store
+*.vscode
+/typings/
+/miniprogram_npm/
+/node_modules/
