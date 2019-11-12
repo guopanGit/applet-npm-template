@@ -17,5 +17,8 @@
 * 设置方法
  settings --> Languages&Frameworks --> JavaScript --> Libraries
 
+ ### utils 文件夹
+* ajaxPromise 基于Promise简单的请求封装
+* formatTime 默认日期格式修改
  
 >项目地址: https://github.com/guopanGit/applet-npm-template.git

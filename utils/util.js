@@ -1,3 +1,8 @@
+/*
+ *  guoPan
+ *  2019-11-12 18:25
+ */
+
 /**
  * 时间格式化函数
  * @date 传入日期对象
@@ -44,7 +49,7 @@ export function formatNumber(n) {
   return n[1] ? n : '0' + n
 }
 
-/*
+/**
  * 弱提示封装
  * @title 提示内容
  */
@@ -57,6 +62,13 @@ export function showToast(title) {
   })
 }
 
+/**
+ * 请求封装
+ * @isLoading 是否显示Loading
+ * @url 请求地址
+ * @data 请求参数
+ * @method 请求类型
+ */
 export function ajaxPromise(isLoading, url, data, method, modal) {
   // 请求判断类型
   if (!method) {
@@ -83,13 +95,21 @@ export function ajaxPromise(isLoading, url, data, method, modal) {
         if (isLoading) {
           wx.hideLoading();
         }
-        resolve(res)
+        // 根据请求结果修改
+        if (res.resultCode === '0') {
+          resolve(res)
+        } else {
+          rejected(res)
+          if (!modal) {
+            showToast(res.resultData)
+          }
+        }
       },
       fail: () => {
         if (isLoading) {
           wx.hideLoading();
         }
-        showToast('请求超时')
+        showToast('网络堵车了~')
       }
     })
   })
