@@ -12,12 +12,12 @@
 #### 第三步:
 > 勾选 “使用 npm 模块” 选项：
 
- ### typings 文件夹
+ ### typings
 * 用来 webstrom 开发提示使用 不需要可以自行删除
 * 设置方法
  settings --> Languages&Frameworks --> JavaScript --> Libraries
 
- ### utils 文件夹
+ ### utils
 * ajaxPromise 基于Promise简单的请求封装
 * formatTime 默认日期格式修改
  
