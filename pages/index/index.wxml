@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="container">
+  <van-notice-bar
+    left-icon="volume-o"
+    text="{{text}}"
+  ></van-notice-bar>
+</view>
